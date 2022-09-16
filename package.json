@@ -1,7 +1,7 @@
 {
-  "name": "@turbo-lab/template-hardhat-sol",
+  "name": "@kamescg/erc721KC",
   "version": "0.0.0-beta.0",
-  "description": "Smart Contract Boilerplate using Hardhat",
+  "description": "Counterfactual ERC721K NFT",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -76,9 +76,6 @@
     "deploy/**"
   ],
   "dependencies": {
-    "@foundry-rs/hardhat": "^0.1.6",
-    "@foundry-rs/hardhat-anvil": "^0.1.5",
-    "@foundry-rs/hardhat-forge": "^0.1.7",
     "@openzeppelin/contracts": "^4.6.0"
   }
 }

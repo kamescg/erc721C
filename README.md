@@ -1,9 +1,15 @@
-# Smart Contracts Boilerplate for Hardhat
+# Counterfactual ERC721K Example
 
 ![Test](https://github.com/turbo-eth/template-hardhat-sol/actions/workflows/test.yml/badge.svg)
 ![Coverage](https://github.com/turbo-eth/template-hardhat-sol/actions/workflows/coverage.yml/badge.svg)
 ![TS](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+
+# WARNING
+
+This repo is just for demonstration purposes. It's not intended for production usage.
+
+If you have questions ping me on twitter.com/KamesGeraghty or create an issue on this demo repo.
 
 # Installation
 
