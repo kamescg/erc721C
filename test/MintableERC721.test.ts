@@ -6,26 +6,25 @@ import { ethers } from 'hardhat';
 const { getSigners, utils } = ethers;
 const { parseEther: toWei } = utils;
 
-describe('MintableERC721', () => {
+describe('ERC721KC', () => {
   let wallet0: SignerWithAddress;
   let wallet1: SignerWithAddress;
   let wallet2: SignerWithAddress;
-  let MintableERC721: Contract;
-  let MintableERC721Factory: ContractFactory;
+  let ERC721KC: Contract;
+  let ERC721KCFactory: ContractFactory;
 
   before(async () => {
     [wallet0, wallet1, wallet2] = await getSigners();
-    MintableERC721Factory = await ethers.getContractFactory('MintableERC721');
+    ERC721KCFactory = await ethers.getContractFactory('ERC721KC');
   });
 
   beforeEach(async () => {
-    MintableERC721 = await MintableERC721Factory.deploy('Collectable', 'NFT');
+    ERC721KC = await ERC721KCFactory.deploy('Collectable', 'NFT');
   });
 
   describe('mint(address to, uint256 amount)', () => {
     it('should SUCCEED to mint NFT #1', async () => {
-      await MintableERC721.mint(wallet0.address, 1);
-      expect(await MintableERC721.ownerOf(1)).to.be.equal(wallet0.address);
+   
     });
   });
 });

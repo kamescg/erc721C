@@ -52,16 +52,14 @@ contract ERC20TWAB is ERC20Permit {
    */
   event NewTotalSupplyTwab(ObservationLib.Observation newTotalSupplyTwab);
 
-  constructor(
-    string memory name,
-    string memory symbol
-  ) ERC20Permit("ERC20TWAB") ERC20(name, symbol) {
-  }
+  constructor(string memory name, string memory symbol)
+    ERC20Permit("ERC20TWAB")
+    ERC20(name, symbol)
+  {}
 
   /* ===================================================================================== */
   /* External Functions                                                                    */
   /* ===================================================================================== */
-
 
   function getAccountDetails(address _user) external view returns (TwabLib.AccountDetails memory) {
     return userTwabs[_user].details;

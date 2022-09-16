@@ -18,65 +18,63 @@ pragma solidity 0.8.15;
  * all math on `uint256` and `int256` and then downcasting.
  */
 library ExtendedSafeCastLib {
+  /**
+   * @dev Returns the downcasted uint104 from uint256, reverting on
+   * overflow (when the input is greater than largest uint104).
+   *
+   * Counterpart to Solidity's `uint104` operator.
+   *
+   * Requirements:
+   *
+   * - input must fit into 104 bits
+   */
+  function toUint104(uint256 _value) internal pure returns (uint104) {
+    require(_value <= type(uint104).max, "SafeCast: value doesn't fit in 104 bits");
+    return uint104(_value);
+  }
 
-    /**
-     * @dev Returns the downcasted uint104 from uint256, reverting on
-     * overflow (when the input is greater than largest uint104).
-     *
-     * Counterpart to Solidity's `uint104` operator.
-     *
-     * Requirements:
-     *
-     * - input must fit into 104 bits
-     */
-    function toUint104(uint256 _value) internal pure returns (uint104) {
-        require(_value <= type(uint104).max, "SafeCast: value doesn't fit in 104 bits");
-        return uint104(_value);
-    }
+  /**
+   * @dev Returns the downcasted uint208 from uint256, reverting on
+   * overflow (when the input is greater than largest uint208).
+   *
+   * Counterpart to Solidity's `uint208` operator.
+   *
+   * Requirements:
+   *
+   * - input must fit into 208 bits
+   */
+  function toUint208(uint256 _value) internal pure returns (uint208) {
+    require(_value <= type(uint208).max, "SafeCast: value doesn't fit in 208 bits");
+    return uint208(_value);
+  }
 
-    /**
-     * @dev Returns the downcasted uint208 from uint256, reverting on
-     * overflow (when the input is greater than largest uint208).
-     *
-     * Counterpart to Solidity's `uint208` operator.
-     *
-     * Requirements:
-     *
-     * - input must fit into 208 bits
-     */
-    function toUint208(uint256 _value) internal pure returns (uint208) {
-        require(_value <= type(uint208).max, "SafeCast: value doesn't fit in 208 bits");
-        return uint208(_value);
-    }
+  /**
+   * @dev Returns the downcasted uint224 from uint256, reverting on
+   * overflow (when the input is greater than largest uint224).
+   *
+   * Counterpart to Solidity's `uint224` operator.
+   *
+   * Requirements:
+   *
+   * - input must fit into 224 bits
+   */
+  function toUint224(uint256 _value) internal pure returns (uint224) {
+    require(_value <= type(uint224).max, "SafeCast: value doesn't fit in 224 bits");
+    return uint224(_value);
+  }
 
-    /**
-     * @dev Returns the downcasted uint224 from uint256, reverting on
-     * overflow (when the input is greater than largest uint224).
-     *
-     * Counterpart to Solidity's `uint224` operator.
-     *
-     * Requirements:
-     *
-     * - input must fit into 224 bits
-     */
-    function toUint224(uint256 _value) internal pure returns (uint224) {
-        require(_value <= type(uint224).max, "SafeCast: value doesn't fit in 224 bits");
-        return uint224(_value);
-    }
-
-    /**
-     * @dev Returns the downcasted uint192 from uint256, reverting on
-     * overflow (when the input is greater than largest uint192).
-     *
-     * Counterpart to Solidity's `uint192` operator.
-     *
-     * Requirements:
-     *
-     * - input must fit into 224 bits
-     */
-    function toUint192(uint256 value) internal pure returns (uint192) {
-        require(value <= type(uint192).max, "SafeCast: value doesn't fit in 192 bits");
-        return uint192(value);
-    }
-
+  /**
+   * @dev Returns the downcasted uint192 from uint256, reverting on
+   * overflow (when the input is greater than largest uint192).
+   *
+   * Counterpart to Solidity's `uint192` operator.
+   *
+   * Requirements:
+   *
+   * - input must fit into 224 bits
+   */
+  function toUint192(uint256 value) internal pure returns (uint192) {
+    require(value <= type(uint192).max, "SafeCast: value doesn't fit in 192 bits");
+    return uint192(value);
+  }
 }
