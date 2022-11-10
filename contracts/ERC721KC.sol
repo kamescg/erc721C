@@ -33,7 +33,7 @@ contract ERC721KC is ERC721K {
   }
 
   function tokenURI(uint256 tokenId) external view returns (string memory) {
-    return ISVGRender(ERC721Storage(_erc721Storage).getSvgRender()).render(input);
+    return ISVGRender(ERC721Storage(_erc721Storage).getSvgRender()).render(tokenId);
   }
 
   function _tokenData(uint256 tokenId)
